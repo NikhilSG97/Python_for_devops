@@ -1,0 +1,18 @@
+import os
+Folders = input("Enter a valid folder name and give space for next folder: ").split()
+print(Folders)
+ 
+for folder in Folders:
+    
+    try:
+      files = os.listdir(folder)
+    except FileNotFoundError:
+     print(f"\n {folder}  : Folder not fount, enter a valid folder name")
+     continue
+        
+    
+    print(f"\nFiles in {folder} folder are:")
+    print(files)
+    
+    for file in files:
+     print(file)
